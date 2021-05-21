@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "autoname": "field:account_name",
+ "creation": "2021-04-21 12:26:03.854159",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account_name",
+  "account_type",
+  "account_category",
+  "company",
+  "account_status",
+  "account_n0",
+  "account_currency",
+  "root_type",
+  "account_balance",
+  "lft",
+  "rgt",
+  "old_parent",
+  "parent_account",
+  "amended_from",
+  "is_group"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Account_type",
+   "options": "payable\nrecieveable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_category",
+   "fieldtype": "Data",
+   "label": "Account_category"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "fieldname": "account_status",
+   "fieldtype": "Data",
+   "label": "Account_status"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account_name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "account_currency",
+   "fieldtype": "Currency",
+   "label": "Account_currency"
+  },
+  {
+   "fieldname": "root_type",
+   "fieldtype": "Select",
+   "label": "Root_type",
+   "options": "liability\nasset\nincome_expense"
+  },
+  {
+   "fieldname": "account_balance",
+   "fieldtype": "Float",
+   "label": "Account_balance"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Lft",
+   "no_copy": 1,
+   "options": "lft",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Rgt",
+   "no_copy": 1,
+   "options": "rgt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "account"
+  },
+  {
+   "fieldname": "parent_account",
+   "fieldtype": "Link",
+   "label": "Parent account",
+   "options": "account"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "account",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "account_n0",
+   "fieldtype": "Data",
+   "label": "Account_no"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2021-05-12 08:42:39.719631",
+ "modified_by": "Administrator",
+ "module": "Accounting",
+ "name": "account",
+ "nsm_parent_field": "parent_account",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
