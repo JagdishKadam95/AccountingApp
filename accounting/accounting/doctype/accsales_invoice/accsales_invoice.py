@@ -8,6 +8,7 @@ from frappe.model.document import Document
 from datetime import date
 class AccSales_invoice(Document):
 	def on_submit(self):
+		""" Saving data/ entry for sales in AccPayment_entry doctype"""
 		payment_entry = frappe.new_doc('AccPayment_entry')
 		payment_entry.party_name=self.customer_name
 		payment_entry.party_type = self.payment_type
@@ -26,15 +27,15 @@ class AccSales_invoice(Document):
 		journal_entry.submit()
 
 
-		""" Saving data/ entry for purchase in general ledger"""
+		""" Saving data/ entry for sales in general ledger"""
 		general_ledger = frappe.new_doc('General Ledger')
 		general_ledger.transaction_date = self.date
 		general_ledger.account = self.account_no
 		#general_ledger.against_account = self.credit_account_number
 		#general_ledger.voucher_type = "Purchase Invoice"
 		general_ledger.voucher_type = "AccSales_invoice"
-		general_ledger.debit = self.total_amount
-		general_ledger.credit = 0.00
+		general_ledger.debit =  0.00
+		general_ledger.credit = self.total_amount
 		general_ledger.fiscal_year = self.date
 		general_ledger.created_at = date.today()
 		general_ledger.save()

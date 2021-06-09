@@ -1,5 +1,5 @@
 {
- "actions": [],
+ "autoname": "AP.#####",
  "creation": "2021-04-26 14:51:35.220447",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -79,8 +79,7 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2021-05-12 10:30:45.064799",
+ "modified": "2021-06-09 05:43:50.584089",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "AccPurchase_invoice",

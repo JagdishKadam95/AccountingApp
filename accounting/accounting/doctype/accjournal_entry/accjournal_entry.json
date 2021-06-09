@@ -1,5 +1,5 @@
 {
- "actions": [],
+ "autoname": "AJ.#####",
  "creation": "2021-04-20 11:33:39.468108",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -34,8 +34,7 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2021-05-12 08:36:33.690060",
+ "modified": "2021-06-09 06:00:58.667271",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "AccJournal_entry",

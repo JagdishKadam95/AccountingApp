@@ -4,16 +4,13 @@
 from __future__ import unicode_literals
 import frappe
 
-# def execute(filters=None):
-# 	columns, data = [], []
-# 	return columns, data
-
 def execute(filters=None):
 	columns = get_columns()
 	data = get_filtered_date(filters)
 	return columns, data
 
 def get_filtered_date(filters=None):
+	#for accessing doctype with the help of filters
 	if filters:
 		create_filter = []
 		if filters.get('account'):
@@ -32,11 +29,13 @@ def get_filtered_date(filters=None):
 			create_filter.append("date = '{}'".format(filters.get('date')))
 		print("create filter", create_filter)
 		where_conditions = 'where {}'.format(' and '.join(create_filter))
-		print(where_conditions)   
+		print(where_conditions)  
+		#select all data of general ledger by descending order of date 
 		query = 'select * from `tabGeneral Ledger` {} order by date desc;'.format(where_conditions)
 		print(query)
 		data = frappe.db.sql(query, filters, as_dict=1)
 		return data
+	#select all data of general ledger by descending order of date 	
 	query = 'select * from `tabGeneral Ledger` order by date desc;'
 	data = frappe.db.sql(query, as_dict=1)
 	return data
@@ -100,12 +99,7 @@ def get_columns():
 		"options": "Fiscal Year",
 		"width": 120
 		}
-		# {
-		# "fieldname": "date",
-		# "fieldtype": "Datetime",
-		# "label": "Date",
-		# "width": 120
-		# }
+	
 	]
 	
 	

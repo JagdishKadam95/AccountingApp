@@ -1,5 +1,4 @@
 {
- "actions": [],
  "autoname": "field:account_name",
  "creation": "2021-04-21 12:26:03.854159",
  "doctype": "DocType",
@@ -11,7 +10,7 @@
   "account_category",
   "company",
   "account_status",
-  "account_n0",
+  "account_no",
   "account_currency",
   "root_type",
   "account_balance",
@@ -116,15 +115,14 @@
    "label": "Is Group"
   },
   {
-   "fieldname": "account_n0",
+   "fieldname": "account_no",
    "fieldtype": "Data",
    "label": "Account_no"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_tree": 1,
- "links": [],
- "modified": "2021-05-12 08:42:39.719631",
+ "modified": "2021-06-09 10:39:38.258073",
  "modified_by": "Administrator",
  "module": "Accounting",
  "name": "account",
